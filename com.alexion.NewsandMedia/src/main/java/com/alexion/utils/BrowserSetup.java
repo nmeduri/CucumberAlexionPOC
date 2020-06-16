@@ -18,6 +18,7 @@ public class BrowserSetup {
 		driver.manage().window().maximize();
 		driver.get("https://alexion.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		System.out.println("Browser Launched");
 	}
 
 	public static void clickLink() {
