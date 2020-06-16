@@ -22,6 +22,7 @@ public class BrowserSetup {
 
 	public static void clickLink() {
 		driver.findElement(By.linkText("News & Media")).click();
+		System.out.println("Clicked on News & Media link");
 	}
 
 	public static void assertText() {
