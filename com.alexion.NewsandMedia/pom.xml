@@ -19,8 +19,8 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-			
-				<!-- CucumberJVM Report plugin -->
+
+			<!-- CucumberJVM Report plugin -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
@@ -29,7 +29,7 @@
 					<executable>C:\Program Files\Java\jdk1.8.0_251\bin\javac.exe</executable>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -53,10 +53,12 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 
+   	<!-- Project Dependencies -->
+   	
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -134,7 +136,7 @@
 		</dependency>
 
 
-		<!-- CUCUMBER EXTENT REPORTING DEPENDENCIES -->
+		<!-- CUCUMBER EXTENT REPORT DEPENDENCIES -->
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
 		<dependency>
@@ -149,7 +151,7 @@
 			<artifactId>cucumber-reporting</artifactId>
 			<version>5.3.0</version>
 		</dependency>
-		
+
 	</dependencies>
 
 
