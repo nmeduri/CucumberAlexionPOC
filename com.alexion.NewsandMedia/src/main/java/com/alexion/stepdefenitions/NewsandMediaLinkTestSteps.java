@@ -50,5 +50,6 @@ public class NewsandMediaLinkTestSteps extends BrowserSetup {
 	@After
 	public void tearDown() {
 		System.out.println(" New and Media Scenario Execution Completed Successfully.....");
+		
 	}
 }

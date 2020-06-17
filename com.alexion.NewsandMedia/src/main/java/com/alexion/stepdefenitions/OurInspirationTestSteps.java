@@ -32,7 +32,7 @@ public class OurInspirationTestSteps extends BrowserSetup {
 	
 	@After
 	public void tearDown() {
-		System.out.println(" OurInspiration Scenario Execution Completed Successfully.....");
+		System.out.println(" OurInspiration Scenario Execution Completed Successfully......");
 	}
 
 }

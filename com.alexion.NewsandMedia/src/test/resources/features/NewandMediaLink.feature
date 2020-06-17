@@ -1,5 +1,5 @@
 @Important
-Feature: News&Media Link Function
+Feature: News&Media Link Functionality
 
   @Smoke
   Scenario: Verify News&Media Link Function1

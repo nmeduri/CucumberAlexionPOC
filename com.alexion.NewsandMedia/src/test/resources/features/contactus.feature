@@ -1,5 +1,5 @@
 @Important
-Feature: ContactUs Link
+Feature: ContactUs Link Functionality
 
   @Smoke
   Scenario: Verify ContactUs Link5

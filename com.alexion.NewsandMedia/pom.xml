@@ -67,8 +67,6 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.7.0</version>
 		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/com.sun/tools -->
 		<dependency>
 			<groupId>com.sun</groupId>

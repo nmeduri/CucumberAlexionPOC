@@ -95,7 +95,7 @@ public class BrowserSetup {
 
 	public static void ourInspirationLink() throws InterruptedException {
 		driver.findElement(By.xpath("//li[@class='ourinspiration']")).click();
-		System.out.println("Clicked on OurInspirationLink");
+		System.out.println("Clicked on OurInspirationLink....");
 		Actions ac = new Actions(driver);
 		Thread.sleep(1000);
 		WebElement option = driver.findElement(By.xpath("//a[text()='aHUS']"));

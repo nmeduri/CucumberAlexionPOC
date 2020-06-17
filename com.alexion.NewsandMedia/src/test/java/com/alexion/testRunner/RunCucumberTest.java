@@ -16,7 +16,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				// tags = {"@Smoke,@Regression"}, //Only scenarios those tagged with either
 				// @Smoke OR @Regression will get execute
 	
-
+        strict=true,
 		monochrome = true,
 		plugin = { "pretty", "html:target/html/AlexionSanity.html",
 				"json:target/json/AlexionSanity.json", "junit:target/junit/AlexionSanity.xml",
