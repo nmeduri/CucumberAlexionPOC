@@ -2,17 +2,23 @@ package com.alexion.stepdefenitions;
 
 import com.alexion.utils.BrowserSetup;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class NewsandMediaLinkTestSteps extends BrowserSetup {
 
+	@Before
+	public void setUp() {
+		System.out.println("Starting New and Media Scenario Execution.....");
+	}
+	
 	@Given("^User is on Alexion Home Page$")
 	public void user_is_on_Alexion_Home_Page() {
-
 		BrowserSetup.launchBrowser();
-
 	}
 
 	@When("^User  click on NEWS&MEDIA Link$")
@@ -25,8 +31,9 @@ public class NewsandMediaLinkTestSteps extends BrowserSetup {
 		BrowserSetup.assertText();
 	}
 
-	@Then("^User selects option from NEWS CATEGORY dropdown and Year from YEAR dropdown$")
-	public void user_selects_option_from_NEWS_CATEGORY_dropdown_and_Year_from_YEAR_dropdown() throws InterruptedException {
+	@And("^User selects option from NEWS CATEGORY dropdown and Year from YEAR dropdown$")
+	public void user_selects_option_from_NEWS_CATEGORY_dropdown_and_Year_from_YEAR_dropdown()
+			throws InterruptedException {
 		BrowserSetup.selectOptionsFromDropdown();
 	}
 
@@ -37,7 +44,11 @@ public class NewsandMediaLinkTestSteps extends BrowserSetup {
 
 	@Then("^User selected Year News should be displayed on the same page$")
 	public void user_selected_Year_News_should_be_displayed_on_the_same_page() {
-		System.out.println("Hi");
+		BrowserSetup.closeBrowser();
+		System.out.println("NewsandMedia Feature Successfully Executed....");
 	}
-
+	@After
+	public void tearDown() {
+		System.out.println(" New and Media Scenario Execution Completed Successfully.....");
+	}
 }
