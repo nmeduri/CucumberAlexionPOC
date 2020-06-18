@@ -26,6 +26,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
 
 	public static void writeExtentReport() {
-
+           System.out.println("Test Completed");
 	}
 }
