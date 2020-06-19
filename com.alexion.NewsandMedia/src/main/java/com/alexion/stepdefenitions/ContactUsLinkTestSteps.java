@@ -10,78 +10,78 @@ import io.cucumber.java.en.When;
 
 public class ContactUsLinkTestSteps extends BrowserSetup {
 
-	public String fName = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_1__Value']";
-	public String lName = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_2__Value']";
-	public String e_mail = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_3__Value']";
-	public String areaofInt = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_14__Value']";
-	public String prod = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_15__Value']";
-	public String inq = "//textarea[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_16__Value']";
-	public String contlink = "Alexion.com/EthicsHotline";
-	public String minfolink = "a[href*='/contact-alexion'][class*=link]";
+	public static final String FIRST_NAME = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_1__Value']";
+	public static final String LAST_NAME = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_2__Value']";
+	public static final String E_MAIL = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_3__Value']";
+	public static final String AREAOF_INT = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_14__Value']";
+	public static final String PROD_ID = "//input[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_15__Value']";
+	public static final String INQ_ID = "//textarea[@id='wffm77b644cfd63c4ae28f2cdb6a41c929cd_Sections_0__Fields_16__Value']";
+	public static final String CONTACT_LINK = "Alexion.com/EthicsHotline";
+	public static final String MINFO_LINK = "a[href*='/contact-alexion'][class*=link]";
 
 	@Before
 	public void setUp() {
 		System.out.println("Starting ContactUsLink Scenario Execution.....");
 	}
 	@Given("^User is on Alexion HomePage$")
-	public void user_is_on_Alexion_HomePage() {
+	public void userHomePage() {
 		BrowserSetup.launchBrowser();
 	}
 
 	@When("^User  click on ContactUs Link$")
-	public void user_click_on_ContactUs_Link() {
+	public void userclickContactUsLink() {
 		BrowserSetup.clickContactUsLink();
 	}
 
 	@Then("^ContactUs screen shoud display$")
-	public void contactus_screen_shoud_display() {
-		BrowserSetup.assertLink(contlink);
+	public void contactus_screenDisplay() {
+		BrowserSetup.assertLink(CONTACT_LINK);
 	}
 
 	@When("^User  click on MedicalInformation Link$")
-	public void user_click_on_MedicalInformation_Link() {
+	public void userclickMedicalInformationLink() {
 		BrowserSetup.clickMedicalInfoLink();
 	}
 
 	@Then("^User enters \"([^\"]*)\" in the firstname field$")
-	public void user_enters_in_the_firstname_field(String firstname) {
-		BrowserSetup.enterTextBox(fName, firstname);
+	public void userentersFirstname(String firstname) {
+		BrowserSetup.enterTextBox(FIRST_NAME, firstname);
 	}
 
 	@Then("^User enters \"([^\"]*)\" in the lastname field$")
-	public void user_enters_in_the_lastname_field(String lastname) {
-		BrowserSetup.enterTextBox(lName, lastname);
+	public void userentersLastname(String lastname) {
+		BrowserSetup.enterTextBox(LAST_NAME, lastname);
 	}
 
 	@Then("^User enters \"([^\"]*)\" in the email field$")
-	public void user_enters_in_the_email_field(String email) {
-		BrowserSetup.enterTextBox(e_mail, email);
+	public void userentersEmail(String email) {
+		BrowserSetup.enterTextBox(E_MAIL, email);
 	}
 
 	@Then("^User selects country from dropdown$")
-	public void user_selects_country_from_dropdown() {
+	public void userselectsCountry() {
 		BrowserSetup.selectDropdown();
 	}
 
 	@Then("^User enters \"([^\"]*)\" in area of interest filed$")
-	public void user_enters_in_area_of_interest_filed(String areaOfinterest) {
-		BrowserSetup.enterTextBox(areaofInt, areaOfinterest);
+	public void userentersAreaofInterest(String areaOfinterest) {
+		BrowserSetup.enterTextBox(AREAOF_INT, areaOfinterest);
 	}
 
 	@Then("^User enters \"([^\"]*)\" in the product field$")
-	public void user_enters_in_the_product_field(String product) {
-		BrowserSetup.enterTextBox(prod, product);
+	public void userentersProduct(String product) {
+		BrowserSetup.enterTextBox(PROD_ID, product);
 	}
 
 	@Then("^User enters  \"([^\"]*)\" in inquiry$")
-	public void user_enters_in_inquiry(String inquiry) {
-		BrowserSetup.enterTextBox(inq, inquiry);
+	public void userentersInquiry(String inquiry) {
+		BrowserSetup.enterTextBox(INQ_ID, inquiry);
 	}
 
 	@Then("^User click on submit button$")
-	public void user_click_on_submit_button() {
+	public void userclickSubmit() {
 		BrowserSetup.closeBrowser();
-		System.out.println("Contact Us Feature Successfully Executed....");
+		
 	}
 	@After
 	public void tearDown() {
