@@ -19,21 +19,17 @@ public class BrowserSetup {
 		driver.manage().window().maximize();
 		driver.get("https://alexion.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		System.out.println("Browser Launched");
+
 	}
 
 	public static void clickLink() {
 		driver.findElement(By.linkText("News & Media")).click();
-		System.out.println("Clicked on News & Media link");
+
 	}
 
 	public static void assertText() {
-		try {
-			boolean displayed = driver.findElement(By.xpath("//input[@id='edit-submit']")).isDisplayed();
-			Assert.assertEquals(true, displayed);
-		} catch (Exception e) {
-			System.out.println(e.getMessage() + "Filter button not displayed");
-		}
+		boolean displayed = driver.findElement(By.xpath("//input[@id='edit-submit']")).isDisplayed();
+		Assert.assertEquals(true, displayed);
 	}
 
 	public static void selectOptionsFromDropdown() throws InterruptedException {
@@ -57,7 +53,7 @@ public class BrowserSetup {
 
 	public static void clickContactUsLink() {
 		driver.findElement(By.linkText("Contact Us")).click();
-		System.out.println("Clicked on ContactUs link");
+
 	}
 
 	public static void clickMedicalInfoLink() {
@@ -71,7 +67,6 @@ public class BrowserSetup {
 	public static void assertLink(String link) {
 		boolean displayed = driver.findElement(By.linkText(link)).isDisplayed();
 		Assert.assertEquals(true, displayed);
-
 	}
 
 	public static void selectDropdown() {
@@ -86,7 +81,6 @@ public class BrowserSetup {
 
 	public static void clickOurResearchLink() throws InterruptedException {
 		driver.findElement(By.xpath("//li[@class='ourresearch']")).click();
-		System.out.println("Clicked on OurResearchLink");
 		Actions ac = new Actions(driver);
 		Thread.sleep(1000);
 		WebElement option = driver.findElement(By.xpath("//a[text()='Research and Development']"));
@@ -95,7 +89,6 @@ public class BrowserSetup {
 
 	public static void ourInspirationLink() throws InterruptedException {
 		driver.findElement(By.xpath("//li[@class='ourinspiration']")).click();
-		System.out.println("Clicked on OurInspirationLink....");
 		Actions ac = new Actions(driver);
 		Thread.sleep(1000);
 		WebElement option = driver.findElement(By.xpath("//a[text()='aHUS']"));
