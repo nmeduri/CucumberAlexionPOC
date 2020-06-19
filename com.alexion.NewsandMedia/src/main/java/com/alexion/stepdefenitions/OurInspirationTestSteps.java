@@ -15,19 +15,19 @@ public class OurInspirationTestSteps extends BrowserSetup {
 	}
 
 	@Given("^User Alexion WebPage$")
-	public void user_Alexion_WebPage() {
+	public void userisonAlexionwebpage() {
 		BrowserSetup.launchBrowser();
 	}
 
 	@When("^User clik on Our Inspiration Link$")
-	public void user_clik_on_Our_Inspiration_Link() throws InterruptedException {
+	public void userclickOurinspirationlink() throws InterruptedException {
 		BrowserSetup.ourInspirationLink();
 	}
 
 	@Then("^Our Inspiration Link should display$")
-	public void our_Inspiration_Link_should_display() {
+	public void inspirationlinkdisplay() {
 		BrowserSetup.closeBrowser();
-		System.out.println("OurInspiration Successfully Executed....");
+
 	}
 	
 	@After
