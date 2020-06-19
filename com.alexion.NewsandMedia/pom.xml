@@ -20,7 +20,7 @@
 				</configuration>
 			</plugin>
 
-			<!-- CucumberJVM Report plugin -->
+			<!-- CucumberJVM Report plugin to generate Reports -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
