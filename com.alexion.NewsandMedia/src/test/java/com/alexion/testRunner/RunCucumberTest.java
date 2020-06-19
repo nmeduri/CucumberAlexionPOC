@@ -6,10 +6,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 
 		features = "src/test/resources/features",
-		glue = "com.alexion.stepdefenitions",
-		tags = {"@Important"}, // All scenarios will get execute from feature files
-				// tags = {"@Smoke"}, // Only tag with @Smoke scenarios will get execute
-				// tags = {"@Regression"}, //Only tag with @Regression scenarios will get
+		glue     = "com.alexion.stepdefenitions",
+		//tags = {"@Important"}, // All scenarios will get execute from feature files
+				 tags = {"@Smoke"}, // Only tag with @Smoke scenarios will get execute
+				 //tags = {"@Regression"}, //Only tag with @Regression scenarios will get
 				// execute
 				// tags = {"@Smoke","@Regression"},// Only scenarios those tagged with both
 				// @Smoke AND @Regression will get execute.(AND condition)
@@ -26,6 +26,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
 
 	public static void writeExtentReport() {
-           System.out.println("Test Completed");
+
 	}
 }
