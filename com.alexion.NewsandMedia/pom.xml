@@ -54,7 +54,7 @@
 				</executions>
 			</plugin>
 
-			<!-- JACOCO Plugin -->
+			<!-- JACOCO Plugin for generating CodeCoverage Report -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
