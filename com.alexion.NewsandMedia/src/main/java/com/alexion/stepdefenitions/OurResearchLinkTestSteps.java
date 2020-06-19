@@ -15,19 +15,19 @@ public class OurResearchLinkTestSteps extends BrowserSetup {
 		System.out.println("Starting OurResearchLink Scenario Execution.....");
 	}
 	@Given("^User launched Alexion WebPage$")
-	public void user_launched_Alexion_WebPage() {
+	public void userlaunchedAlexionPage() {
 		BrowserSetup.launchBrowser();
 	}
 
 	@When("User clik on Our Research Link")
-	public void user_clik_on_Our_Research_Link() throws InterruptedException {
+	public void userclickResearchlink() throws InterruptedException {
 		BrowserSetup.clickOurResearchLink();
 	}
 
 	@Then("Our Research Link should display")
-	public void our_Research_Link_should_display() {
+	public void ourResearchlinkDisplay() {
 		BrowserSetup.closeBrowser();
-		System.out.println("OurResearch Feature Successfully Executed....");
+		
 	}
 	@After
 	public void tearDown() {
