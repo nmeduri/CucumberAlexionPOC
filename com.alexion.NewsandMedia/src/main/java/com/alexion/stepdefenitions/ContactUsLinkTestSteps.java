@@ -34,7 +34,7 @@ public class ContactUsLinkTestSteps extends BrowserSetup {
 	}
 
 	@Then("^ContactUs screen shoud display$")
-	public void contactus_screenDisplay() {
+	public void contactusscreenDisplay() {
 		BrowserSetup.assertLink(CONTACT_LINK);
 	}
 
